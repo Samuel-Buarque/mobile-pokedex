@@ -24,11 +24,16 @@ export class Tab1Page {
     private viaCEPService: ViaCEPService,
     private dataSharingService: DataSharingService 
   ) {}
-  isCepValid(): boolean {
-    return this.areaBuscarPokemon.length === 8 && /^\d+$/.test(this.areaBuscarPokemon);
-  }
+  
   
   buscarPokemon() {
+
+       const cep = this.areaBuscarPokemon.trim();
+    if (cep.length !== 8) {
+      alert('Por favor, insira um CEP válido com 8 números.');
+      return;
+    }
+
     this.viaCEPService.getViaCEPService(this.areaBuscarPokemon)
       .subscribe((value) => {
         this.areaBusca.logradouro = JSON.parse(JSON.stringify(value))['logradouro'];
