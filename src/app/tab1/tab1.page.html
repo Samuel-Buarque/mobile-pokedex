@@ -9,9 +9,15 @@
 <ion-content>
   <ion-item>
     <ion-label position="floating">Digite o CEP</ion-label>
-    <ion-input type="number" [(ngModel)]="areaBuscarPokemon" maxlength="8"></ion-input>
-  </ion-item>
-  <ion-button expand="block" (click)="buscarPokemon()" >Buscar por Pokémon</ion-button>
+    <ion-input 
+    type="text" 
+    inputmode="numeric"
+    pattern="\d*"
+    [(ngModel)]="areaBuscarPokemon" 
+    maxlength="8">
+  </ion-input>
+</ion-item>
+<ion-button expand="block" (click)="buscarPokemon()">Buscar por Pokémon</ion-button>
 
   <ion-card *ngIf="pokemon">
     <ion-card-header>
