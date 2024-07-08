@@ -1,5 +1,5 @@
 <h2>About the project</h2>
-<p>The TypeScript Pokédex is an interactive application that provides comprehensive details about various Pokémon. Built with Ionic and TypeScript, this project aims to offer a smooth and engaging user experience for Pokémon enthusiasts.</p>
+<p>The mobile Pokédex is an interactive mobile application that provides comprehensive details about various Pokémon. Built with Ionic and TypeScript, this project allows you to search and battle with your caught pokemons.</p>
 
 <h3>Technologies Used</h3>
 - TypeScript
